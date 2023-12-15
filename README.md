@@ -19,7 +19,7 @@ conda install matplotlib
 conda install ipykernel
 conda env config vars set PYTORCH_ENABLE_MPS_FALLBACK=1
 ```
-If you made it this far, you have a working environment. Well done! From this point forward, you can use `condo activate ./env` whenever you are in the ‘llm_quickstart’ folder.
+If you made it this far, you have a working environment. Well done! From this point forward, you can use `conda activate ./env` whenever you are in the ‘llm_quickstart’ folder.
 
 And if you don't yet have a code editor, like VSCode. You can use Jupyter notebooks within VSCode: https://code.visualstudio.com/docs/datascience/jupyter-notebooks
 
