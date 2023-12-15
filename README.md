@@ -29,6 +29,9 @@ conda install -c huggingface transformers
 conda install sentence-transformers
 ```
 
+Wrap up by creating a kernel for your jupyter notebooks: `python -m ipykernel install --user --name=pytorch211`.
+
+
 ## Chapters
 
 * [Chapter 2 - semantic search](./semantic_search_with_llms/README.md)
