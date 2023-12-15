@@ -34,7 +34,7 @@ conda install sentence-transformers
 Wrap up by creating a kernel for your jupyter notebooks: `python -m ipykernel install --user --name=pytorch211`.
 
 ## Create a database for your embeddings
-1. Get docker.
+1. [Get docker](https://docs.docker.com/desktop/install/mac-install/).
 1. Run `docker build -t my_pgvector:latest`
 1. Run `docker run --name my_pgvector -e POSTGRES_PASSWORD=123456 -d my_pgvector`
 1. Run `docker exec -it my_pgvector bash`
