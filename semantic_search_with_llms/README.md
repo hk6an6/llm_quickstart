@@ -1,5 +1,12 @@
 A tool for semantic search.
 
+There's 3 parts to semantic search:
+- Chunking text, so that it fits size limitations for models that create embeddings.
+- Creating embeddings and using them to index text chunks.
+- Executing search via cosine similarity between asymetric embeddings.
+
+See [this example to create embeddings from text](./embeddings_scratch.ipynb).
+
 # Installation
 
 We'll use pgvector to house embedings and to run cosine similarity.
