@@ -24,6 +24,6 @@ To run the container:
 
 To create the required database and schema:
 1. Run `docker exec -it my_pgvector bash`
-1. Run `psql -h localhost -U postgres-a -f ./make_db.sql`
+1. Run `psql -h localhost -U postgres -a -f ./make_db.sql --password`
 
-You can stop your container with `docker container stop my_pgvector` and restart it anytime with `docker start --publish 127.0.0.1:5432:5432 -e POSTGRES_PASSWORD=123456 my_pgvector`
+You can stop your container with `docker container stop my_pgvector` and restart it anytime with `docker start --publish 127.0.0.1:5432:5432 --detach -e POSTGRES_PASSWORD=123456 my_pgvector`
