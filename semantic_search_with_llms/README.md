@@ -20,10 +20,10 @@ This is split in 2 parts. First running the container, and secondly creating the
 To run the container:
 1. [Get docker](https://docs.docker.com/desktop/install/mac-install/).
 1. Run `docker build -t my_pgvector:latest`
-1. Run `docker run --name my_pgvector -e POSTGRES_PASSWORD=123456 -d my_pgvector`
+1. Run `docker run --publish 127.0.0.1:5432:5432 --name my_pgvector -e POSTGRES_PASSWORD=123456 -d my_pgvector`
 
 To create the required database and schema:
 1. Run `docker exec -it my_pgvector bash`
 1. Run `psql -h localhost -U postgres-a -f ./make_db.sql`
 
-You can stop your container with `docker container stop my_pgvector`
+You can stop your container with `docker container stop my_pgvector` and restart it anytime with `docker start --publish 127.0.0.1:5432:5432 -e POSTGRES_PASSWORD=123456 my_pgvector`
