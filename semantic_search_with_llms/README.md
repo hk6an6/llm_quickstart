@@ -17,13 +17,21 @@ Install pgvector, run `conda install psycopg2` on the command line.
 ## Run a container that hosts pgvector
 This is split in 2 parts. First running the container, and secondly creating the required database and schema.
 
-To run the container:
-1. [Get docker](https://docs.docker.com/desktop/install/mac-install/).
-1. Run `docker build -t my_pgvector:latest`
-1. Run `docker run --publish 127.0.0.1:5432:5432 --name my_pgvector -e POSTGRES_PASSWORD=123456 -d my_pgvector`
+After you [get docker](https://docs.docker.com/desktop/install/mac-install/), run the container:
 
-To create the required database and schema:
-1. Run `docker exec -it my_pgvector bash`
-1. Run `psql -h localhost -U postgres -a -f ./make_db.sql --password`
+```bash
+docker build -t my_pgvector:latest .
+docker run --publish 127.0.0.1:5432:5432 --name my_pgvector -e POSTGRES_PASSWORD=123456 -d my_pgvector
+```
+
+Now create a schema with:
+
+```bash
+docker exec -it my_pgvector  psql -U postgres -c "create database semantic_search;"
+docker exec -it my_pgvector  psql -U postgres -c "create user postgresql password '123456';"
+docker exec -it my_pgvector  psql -U postgres -c "grant all privileges on DATABASE semantic_search to postgresql;"
+docker exec -it my_pgvector  psql -U postgres -d "semantic_search" -c "create extension vector;"
+docker exec -it my_pgvector  psql -U postgres -d "semantic_search" -a -f "/ddl/semantic_search/make_db.sql"
+```
 
 You can stop your container with `docker container stop my_pgvector` and restart it anytime with `docker start --publish 127.0.0.1:5432:5432 --detach -e POSTGRES_PASSWORD=123456 my_pgvector`
