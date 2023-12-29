@@ -1,0 +1,4 @@
+reviews/
+my_autotrained_sentiment_predictor_llm/
+*.jsonl
+*.csv
