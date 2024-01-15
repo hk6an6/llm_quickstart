@@ -35,3 +35,8 @@ Wrap up by creating a kernel for your jupyter notebooks: `python -m ipykernel in
 ## Chapters
 
 * [Chapter 2 - semantic search](./semantic_search_with_llms/README.md)
+* [Chapter 3 - fine tuning](./fine-tuning/fine_tune.ipynb)
+* [Chapter 4 - beginner prompting](./first_steps_prompt_engineering/chat_gpt_qa_bot.ipynb)
+* [Chapter 5 - adv prompting](./advanced_prompt_engineering/prompt_chain.ipynb)
+* [Chapter 6 - recommendation engine](./recommendation_engine/recommendation_engine.ipynb)
+

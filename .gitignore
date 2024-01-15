@@ -1,2 +1,6 @@
 .DS_Store
 
+*.csv
+*.html
+recommendation_engine/data*
+recommendation_engine/anime_encoder
