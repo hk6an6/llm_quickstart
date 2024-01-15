@@ -1,4 +1,4 @@
-Exercises from a quickstart to large language models. There are 2 sections in this doc. First, prerequisites configure your development environment. Then, the capters has a link to a folder with with the relevant code for each chapter.
+Exercises from a quickstart to large language models. There are 2 sections in this doc. First, prerequisites configure your development environment. Then, the chapters section has a link to a folder with with the relevant code for each chapter.
 
 ## Pre requisites
 Before you begin, install Xcode command line tools on your MAC:
