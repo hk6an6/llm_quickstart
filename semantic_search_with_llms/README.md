@@ -35,3 +35,7 @@ docker exec -it my_pgvector  psql -U postgres -d "semantic_search" -a -f "/ddl/s
 ```
 
 You can stop your container with `docker container stop my_pgvector` and restart it anytime with `docker start --publish 127.0.0.1:5432:5432 --detach -e POSTGRES_PASSWORD=123456 my_pgvector`
+
+## Start coding
+
+Follow [the embeddings notebook](./embeddings_scratch.ipynb) to get started coding.
